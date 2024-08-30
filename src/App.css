@@ -1,0 +1,135 @@
+.design-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #3c2f2f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.diamond {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #3c2f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+
+.diamond::before ,
+.diamond::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 20px solid transparent;
+    box-sizing: border-box;
+}
+
+.diamond::before {
+    border-image: linear-gradient(to right,  #ff512f 98.5%, #d4d4d4 98%) 2;
+    border-width: 30px 30px 0 0;
+}
+
+.diamond::after {
+    border-image: linear-gradient(to left, #0575e6 98%,  #92ce77) 1;
+    border-width: 0 0 30px 30px;
+}
+
+@media (max-width: 768px) {
+    .diamond {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-color: #3c2f2f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+    }
+    .diamond::before {
+        border-image: linear-gradient(to right,  #ff512f 98.5%, #d4d4d4 98%) 2;
+        border-width: 20px 20px 0 0;
+    }
+    
+    .diamond::after {
+        border-image: linear-gradient(to left, #0575e6 98%,  #92ce77) 1;
+        border-width: 0 0 20px 20px;
+    }
+    
+}
+
+@media (max-width: 300px) {
+    .diamond {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        background-color: #3c2f2f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+    }
+    .diamond::before {
+        border-image: linear-gradient(to right,  #ff512f 98.5%, #d4d4d4 98%) 2;
+        border-width: 15px 15px 0 0;
+    }
+    
+    .diamond::after {
+        border-image: linear-gradient(to left, #0575e6 98%,  #92ce77) 1;
+        border-width: 0 0 15px 15px;
+    }
+    .text{
+        font-size: 4px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        transform: rotate(-45deg);
+        display: flex;
+        gap: 1px;
+    }
+    .subtext {
+        font-size: 8px;
+        text-align: center;
+        margin-top: 10px;
+        color: #fff;
+        transform: rotate(-45deg);
+    }
+    
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    transform: rotate(-45deg);
+    display: flex;
+    gap: 5px;
+}
+
+.subtext {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    transform: rotate(-45deg);
+}
+
+.author {
+    font-size: 16px;
+    text-align: center;
+    color: #ccc;
+    margin-top: 150px;
+}
+.andsymbol {
+    color: #ff512f;
+}
